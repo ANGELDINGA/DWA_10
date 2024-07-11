@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tally Counter App</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module">
+    import "@shoelace-style/shoelace/dist/themes/light.css";
+    import { setBasePath } from "@shoelace-style/shoelace/dist/utilities/base-path.js";
+    setBasePath("node_modules/@shoelace-style/shoelace/dist");
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Tally Counter App</h1>
+    <sl-card>
+      <div class="counter-display">
+        <sl-badge type="primary" pill><span id="counter">0</span></sl-badge>
+      </div>
+      <div class="buttons">
+        <sl-button id="add-button" variant="primary">Add</sl-button>
+        <sl-button id="subtract-button" variant="danger">Subtract</sl-button>
+        <sl-button id="reset-button" variant="warning">Reset</sl-button>
+      </div>
+    </sl-card>
+    <sl-alert id="reset-alert" type="success" closable>
+      Counter has been reset to 0.
+    </sl-alert>
+  </div>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
